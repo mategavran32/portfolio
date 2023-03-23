@@ -1,9 +1,12 @@
 import React from 'react'
 import {HiArrowRight} from 'react-icons/hi'
+import {Link} from 'react-scroll';
+
 
 const Home = () => {
   return (
     <div name='home' className='w-full h-screen bg-[#344B59]'>
+    
         {/* Container */}
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
             <p className='text-white'>Hi, my name is</p>
@@ -13,11 +16,13 @@ const Home = () => {
                 Currently, I'm focused on finishing college and finding a job as a front end developer.
             </p>
             <div>
-                <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-gray-400 hover:border-gray-300'>View Work 
+                <Link to="work"  smooth={true}  duration={500} > 
+                <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-gray-400 hover:border-gray-300' > Work
                     <span className='group-hover:rotate-90 duration-300'>
                         <HiArrowRight className='ml-3'/>   
                     </span>
                 </button>
+                </Link>
             </div>
         </div>
     </div>
